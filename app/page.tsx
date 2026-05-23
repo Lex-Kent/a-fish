@@ -157,7 +157,7 @@ export default function AFishApp() {
       <div className="flex flex-1 overflow-hidden relative">
         <Sidebar
           conversations={conversations}
-          onSelectConversation={(conv) => setCurrentConversation(conv)}
+          onSelectConversation={(conv) => setCurrentConversation(conv as any)}
           onNewConversation={handleNewConversation}
           selectedConversationId={currentConversation?.id}
           isDark={isDarkMode}
