@@ -162,7 +162,7 @@ export default function AFishApp() {
           selectedConversationId={currentConversation?.id}
           isDark={isDarkMode}
           isCollapsed={isSidebarCollapsed}
-          logo={isDarkMode ? "/images/finLogoSquareOnDark.png" : "/images/finLogoSquareOnWhite.png"}
+          logo={isDarkMode ? "images/finLogoSquareOnDark.png" : "images/finLogoSquareOnWhite.png"}
         />
 
         <button
@@ -186,7 +186,7 @@ export default function AFishApp() {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-4">
                 {isSidebarCollapsed && (
-                  <img src={isDarkMode ? "/images/finLogoLongOnDark.png" : "/images/finLogoLongOnWhite.png"} alt="a•fish" className="h-10 w-auto" />
+                  <img src={isDarkMode ? "images/finLogoLongOnDark.png" : "images/finLogoLongOnWhite.png"} alt="a•fish" className="h-10 w-auto" />
                 )}
               </div>
 
@@ -205,7 +205,7 @@ export default function AFishApp() {
             {!currentConversation || currentConversation.messages.length === 0 ? (
               <div className="h-full flex flex-col items-center justify-center text-center">
                 <img 
-                  src="/images/finHello.png" 
+                  src="images/finHello.png" 
                   alt="Fin" 
                   className="w-48 h-48 mx-auto mb-6 object-contain"
                 />

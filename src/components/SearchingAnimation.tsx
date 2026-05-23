@@ -11,7 +11,7 @@ export function SearchingAnimation({ isDark }: SearchingAnimationProps) {
   const videoRefLight = useRef<HTMLVideoElement>(null);
   const [mounted, setMounted] = useState(false);
 
-	const videoSrc = isDark ? '/videos/finSearchDark.mp4' : '/videos/finSearchLight.mp4';
+	const videoSrc = isDark ? 'videos/finSearchDark.mp4' : 'videos/finSearchLight.mp4';
 
   useEffect(() => {
     setMounted(true);
