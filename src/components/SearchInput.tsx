@@ -135,7 +135,7 @@ export function SearchInput({ onSubmit, isLoading, isDark = true, searchMode = '
               </button>
 
               {showModeMenu && (
-                <div className={`absolute bottom-full left-0 mb-2 rounded-lg border shadow-lg overflow-hidden min-w-[160px] ${
+                <div className={`absolute bottom-full left-0 mb-2 rounded-2xl border shadow-xl overflow-hidden min-w-[220px] ${
                   isDark
                     ? 'bg-[#1e2632] border-[#2a3544]'
                     : 'bg-white border-neutral-300'
@@ -146,42 +146,35 @@ export function SearchInput({ onSubmit, isLoading, isDark = true, searchMode = '
                       onSearchModeChange?.('deep-dive');
                       setShowModeMenu(false);
                     }}
-                    className={`w-full px-4 py-2.5 text-left text-sm transition-colors flex items-center gap-2 ${
+                    className={`w-full flex items-start gap-3 px-4 py-3 text-left transition-colors hover:bg-[#243040] ${
                       searchMode === 'deep-dive'
-                        ? isDark
-                          ? 'bg-[#243040] text-white'
-                          : 'bg-neutral-100 text-neutral-900'
-                        : isDark
-                        ? 'text-slate-300 hover:bg-[#243040]'
-                        : 'text-neutral-700 hover:bg-neutral-50'
+                        ? isDark ? 'bg-[#243040]' : 'bg-neutral-100'
+                        : ''
                     }`}
                   >
-                    <Droplet className="w-4 h-4" />
-                    <div className="flex items-baseline gap-2">
-                      <div className="font-medium">Deep Dive</div>
-                      <div className={`text-xs ${isDark ? 'text-white opacity-50' : 'text-neutral-500'}`}>• Comprehensive search</div>
+                    <Droplet className="w-5 h-5 mt-0.5 flex-shrink-0" />
+                    <div className="flex-1">
+                      <div className="font-medium text-neutral-100">Deep Dive</div>
+                      <div className="text-xs text-slate-400 whitespace-nowrap">Comprehensive search</div>
                     </div>
                   </button>
+
                   <button
                     type="button"
                     onClick={() => {
                       onSearchModeChange?.('surface-skim');
                       setShowModeMenu(false);
                     }}
-                    className={`w-full px-4 py-2.5 text-left text-sm transition-colors flex items-center gap-2 ${
+                    className={`w-full flex items-start gap-3 px-4 py-3 text-left transition-colors hover:bg-[#243040] ${
                       searchMode === 'surface-skim'
-                        ? isDark
-                          ? 'bg-[#243040] text-white'
-                          : 'bg-neutral-100 text-neutral-900'
-                        : isDark
-                        ? 'text-slate-300 hover:bg-[#243040]'
-                        : 'text-neutral-700 hover:bg-neutral-50'
+                        ? isDark ? 'bg-[#243040]' : 'bg-neutral-100'
+                        : ''
                     }`}
                   >
-                    <Waves className="w-4 h-4" />
-                    <div className="flex items-baseline gap-2">
-                      <div className="font-medium">Surface Skim</div>
-                      <div className={`text-xs ${isDark ? 'text-white opacity-50' : 'text-neutral-500'}`}>• Quick overview</div>
+                    <Waves className="w-5 h-5 mt-0.5 flex-shrink-0" />
+                    <div className="flex-1">
+                      <div className="font-medium text-neutral-100">Surface Skim</div>
+                      <div className="text-xs text-slate-400 whitespace-nowrap">Quick overview</div>
                     </div>
                   </button>
                 </div>

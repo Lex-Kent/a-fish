@@ -2,7 +2,7 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
-  basePath: '/prototypes/a-fish',   // ← This is the fix
+  basePath: process.env.NODE_ENV === 'production' ? '/prototypes/a-fish' : '',
   // Completely disable the black circle / Next.js dev indicator
   devIndicators: false,
 };
